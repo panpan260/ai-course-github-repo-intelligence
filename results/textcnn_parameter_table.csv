@@ -1,0 +1,12 @@
+﻿Parameter,Value,Description
+Vocabulary size,30000,Maximum number of tokens kept in the TextCNN vocabulary.
+Max sequence length,300,Maximum token sequence length after padding or truncation.
+Embedding dimension,128,Dimension of trainable word embeddings.
+Kernel sizes,"(3, 4, 5)",Conv1d window sizes used to capture local n-gram patterns.
+Number of filters,96,Number of convolution filters for each kernel size.
+Dropout,0.5,Dropout ratio used before the fully connected layer.
+Batch size,32,Number of samples processed in each training batch.
+Epochs,10,Total number of TextCNN training epochs.
+Optimizer,Adam,Optimizer used for gradient-based parameter updates.
+Learning rate,0.001,Initial learning rate used by Adam.
+Device,"cuda if available, otherwise cpu",Training device selected automatically by PyTorch.

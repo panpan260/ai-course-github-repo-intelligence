@@ -1,0 +1,5 @@
+﻿Repository,Keywords,True_Label,Predicted_Label,Analysis
+Tramac/awesome-semantic-segmentation-pytorch,"pytorch, semantic-segmentation, semantic",computer_vision,computer_vision,Keywords match computer_vision.
+HuaizhengZhang/AI-Infra-from-Zero-to-Hero,"ai-infra, genai, large-language-models, llmsys, mlsys",natural_language_processing,natural_language_processing,Keywords match natural_language_processing.
+microsoft/AutonomousDrivingCookbook,"airsim, autonomous-driving, autonomous-driving-cookbook, autonomous-vehicles, car",robotics,deep_learning_framework,Cross-domain terms cause deep_learning_framework.
+neuralmagic/deepsparse,"computer-vision, cpus, deepsparse, inference, llm-inference",deep_learning_framework,natural_language_processing,Cross-domain terms cause natural_language_processing.

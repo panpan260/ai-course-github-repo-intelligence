@@ -1,0 +1,5 @@
+﻿仓库名称,关键词/主题,真实类别,预测类别,分析
+Tramac/awesome-semantic-segmentation-pytorch,"pytorch, semantic-segmentation, semantic",computer_vision,computer_vision,视觉特征明显
+HuaizhengZhang/AI-Infra-from-Zero-to-Hero,"ai-infra, genai, large-language-models, llmsys, mlsys",natural_language_processing,natural_language_processing,语言模型特征明显
+microsoft/AutonomousDrivingCookbook,"airsim, autonomous-driving, autonomous-driving-cookbook, autonomous-vehicles, car",robotics,deep_learning_framework,跨机器人与深度学习
+neuralmagic/deepsparse,"computer-vision, cpus, deepsparse, inference, llm-inference",deep_learning_framework,natural_language_processing,LLM关键词造成混淆

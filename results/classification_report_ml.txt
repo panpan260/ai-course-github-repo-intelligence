@@ -1,0 +1,10 @@
+                             precision    recall  f1-score   support
+
+            computer_vision       0.88      0.94      0.91       156
+    deep_learning_framework       0.82      0.69      0.75        89
+natural_language_processing       0.87      0.92      0.89       114
+                   robotics       0.97      0.90      0.93        39
+
+                   accuracy                           0.87       398
+                  macro avg       0.89      0.86      0.87       398
+               weighted avg       0.87      0.87      0.87       398

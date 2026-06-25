@@ -1,0 +1,44 @@
+Evaluation Summary
+========================================================================
+Input file: data\clean_repos.csv
+Sample count: 1989
+Project category classes: 4
+Growth popularity classes: 3
+
+Project category classification: best_model=TextCNN, accuracy=0.9146, weighted_f1=0.9128
+Growth popularity prediction: best_model=Logistic Regression, accuracy=0.7186, weighted_f1=0.7201
+
+Traditional ML report preview:
+                             precision    recall  f1-score   support
+
+            computer_vision       0.88      0.94      0.91       156
+    deep_learning_framework       0.82      0.69      0.75        89
+natural_language_processing       0.87      0.92      0.89       114
+                   robotics       0.97      0.90      0.93        39
+
+                   accuracy                           0.87       398
+                  macro avg       0.89      0.86      0.87       398
+               weighted avg       0.87      0.87      0.87       398
+
+TextCNN report preview:
+                             precision    recall  f1-score   support
+
+            computer_vision       0.90      0.97      0.94       156
+    deep_learning_framework       0.92      0.78      0.84        89
+natural_language_processing       0.92      0.95      0.94       114
+                   robotics       0.92      0.90      0.91        39
+
+                   accuracy                           0.91       398
+                  macro avg       0.92      0.90      0.91       398
+               weighted avg       0.92      0.91      0.91       398
+
+Growth model report preview:
+              precision    recall  f1-score   support
+
+         low       0.87      0.78      0.82       133
+      medium       0.61      0.61      0.61       133
+        high       0.70      0.77      0.73       132
+
+    accuracy                           0.72       398
+   macro avg       0.72      0.72      0.72       398
+weighted avg       0.72      0.72      0.72       398
