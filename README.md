@@ -1,6 +1,6 @@
 # 基于 GitHub API 与 TextCNN 的开源项目技术方向识别与成长热度预测研究
 
-本项目是在 GitHub API 开源项目热度预测项目基础上的升级版。项目保留真实 GitHub REST API 数据采集主线，并进一步采集仓库 README 文本，构建自定义开源项目文本数据集，用于人工智能课程论文实验展示。
+本项目是在 GitHub API 开源项目热度预测项目基础上的升级版。项目保留真实 GitHub REST API 数据采集主线，并进一步采集仓库 README 文本，构建自定义开源项目文本数据集。
 
 项目完成两个任务：
 
@@ -23,7 +23,7 @@ README 获取接口：
 https://api.github.com/repos/{full_name}/readme
 ```
 
-项目支持可选 `GITHUB_TOKEN`。没有 Token 时也能低速采集；如果配置了 Token，脚本会自动使用认证请求。
+支持可选 `GITHUB_TOKEN`。没有 Token 时也能低速采集；如果配置了 Token，脚本会自动使用认证请求。
 
 ## 采集关键词
 
@@ -170,7 +170,6 @@ archived
 has_issues
 ```
 
-为避免数据泄露，不直接使用 `stargazers_count` 和 `watchers_count` 作为输入特征。
 
 ## 项目结构
 
@@ -186,10 +185,7 @@ AI_GitHub_Project_Intelligence/
 ├── train_growth_model.py
 ├── evaluate.py
 ├── visualize.py
-├── data/
-│   ├── raw_repos.csv
-│   ├── repos_with_readme.csv
-│   └── clean_repos.csv
+├── raw_repos.csv
 ├── models/
 │   ├── best_ml_model.joblib
 │   ├── textcnn_model.pth
@@ -206,9 +202,7 @@ AI_GitHub_Project_Intelligence/
 │   ├── growth_score_distribution.png
 │   ├── classification_report_ml.txt
 │   ├── classification_report_textcnn.txt
-│   └── wrong_cases.csv
-└── screenshots/
-    └── README_PLACEHOLDER.txt
+└── └── wrong_cases.csv
 ```
 
 ## 环境配置
@@ -301,9 +295,9 @@ python visualize.py
 | results/textcnn_epoch_summary.csv | TextCNN 训练轮次变化表 |
 | results/paper_insert_text.txt | 可直接复制到论文中的补充文字 |
 
-## 论文展示增强材料
+## 展示增强材料
 
-在不重新采集数据、不重新训练 TextCNN 的前提下，可以运行以下脚本生成课程论文展示增强材料：
+在不重新采集数据、不重新训练 TextCNN 的前提下，可以运行以下脚本展示增强材料：
 
 ```bash
 python plot_category_keywords.py
@@ -314,28 +308,16 @@ python visualize.py
 
 增强材料说明：
 
-- `results/category_keywords_tfidf.png`：各技术方向关键词对比图，适合作为论文“特征工程”或“实验结果可视化”的核心展示图。
-- `results/category_keywords_tfidf.csv`：各类别 Top TF-IDF 关键词，可用于补充表格或核对图中关键词。
-- `results/paper_table_ready_cases.csv`：适合复制到 Word 的典型预测案例表，建议放在“错误案例分析”或“定性分析”小节。
+- `results/category_keywords_tfidf.png`：各技术方向关键词对比图
+- `results/category_keywords_tfidf.csv`：各类别 Top TF-IDF 关键词
+- `results/paper_table_ready_cases.csv`：典型预测案例表
 - `results/text_feature_tsne_balanced.png`：用于展示 README 文本特征在二维空间中的分布与类别交叠情况。
-- `results/prediction_cases_compact.csv`：用于论文中的典型样本定性分析。
-- `results/prediction_cases_compact.png`：用于论文插图或作为表格图片参考。
-- `results/textcnn_parameter_table.csv`：用于论文“参数设置”表格。
-- `results/textcnn_epoch_summary.csv`：用于论文“TextCNN 训练过程分析”表格。
-- `results/paper_insert_text.txt`：用于补充 TextCNN 结构解释、训练轮次分析、成长热度预测讨论和 t-SNE 图分析。
+- `results/prediction_cases_compact.csv`：典型样本定性分析。
+- `results/prediction_cases_compact.png`：表格图片参考。
+- `results/textcnn_parameter_table.csv`：“参数设置”表格。
+- `results/textcnn_epoch_summary.csv`“TextCNN 训练过程分析”表格。
+- `results/paper_insert_text.txt`：补充 TextCNN 结构解释、训练轮次分析、成长热度预测讨论和 t-SNE 图分析。
 
-## 截图建议
-
-课程论文中建议截图：
-
-1. `python crawler.py` 终端输出，展示关键词、页数、累计采集数量。
-2. `python fetch_readme.py` 终端输出，展示 README 成功和失败数量。
-3. `python clean_data.py` 终端输出，展示清洗前后样本数、技术方向类别数量、成长热度类别数量。
-4. `python train_ml_models.py` 终端输出，展示传统模型对比指标。
-5. `python train_textcnn.py` 终端输出，展示每轮 train_loss、train_accuracy、test_accuracy。
-6. `python train_growth_model.py` 终端输出，展示成长热度预测模型对比。
-7. `results/` 中的模型对比图、训练曲线、混淆矩阵和数据分布图。
-8. `results/wrong_cases.csv` 中的错误案例，用于误差分析。
 
 ## Rate Limit 说明
 
