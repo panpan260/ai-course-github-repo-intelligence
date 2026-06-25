@@ -185,7 +185,10 @@ ai-course-github-repo-intelligence/
 ├── train_growth_model.py
 ├── evaluate.py
 ├── visualize.py
-├── raw_repos.csv
+├── data/
+│   ├──raw_repos.csv
+│   ├──repos_with_readme.csv
+│   └──clean_repos.csv
 ├── models/
 │   ├── best_ml_model.joblib
 │   ├── textcnn_model.pth
