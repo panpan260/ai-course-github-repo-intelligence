@@ -174,7 +174,7 @@ has_issues
 ## 项目结构
 
 ```text
-AI_GitHub_Project_Intelligence/
+ai-course-github-repo-intelligence/
 ├── README.md
 ├── requirements.txt
 ├── crawler.py
